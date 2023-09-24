@@ -1,7 +1,8 @@
 #ifndef SORT_H
 #define SORT_H
 
-#include <stddef.h>  // For size_t
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list of integers
@@ -34,8 +35,9 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *head);
 
 /**
- * insertion_sort_list - Sorts a doubly linked list of integers in ascending order
- * @list: Pointer to a pointer to the head of the linked list
+ * insertion_sort_list - Sorts a doubly linked list of integers in ascending orderWq
+ 
+* @list: Pointer to a pointer to the head of the linked list
  *
  * Description: This function sorts a doubly linked list of integers in ascending order
  * using the insertion sort algorithm.
@@ -73,4 +75,3 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 
 #endif /* SORT_H */
-
