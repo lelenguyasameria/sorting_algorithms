@@ -12,7 +12,7 @@ int main (void)
 	int array [] = {15,45,88,63,10,47,86,64,76,6};
 	size_t n = sizeof (array) / sizeof (array[0]);
 	
-	ptint_array (array , n);
+	print_array (array , n);
 	printf("\n");
 	bubble_sort (array , n);
 	printf("\n");

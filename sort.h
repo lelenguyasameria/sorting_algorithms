@@ -12,17 +12,17 @@
  * enum bool - Enumeration of Boolean values.
  * @false: Equals 0.
  * @true: Equals 1.
-*/
+ */
 typedef enum bool
 {
-false = 0,
-true
-} bool,
+    false = 0,
+    true
+} bool;
 
 /**
  * struct listint_s - singly linked list of integers
  * @n: Integer value stored in the node
- * @prev:pointer to previus element
+ * @prev: pointer to previous element
  * @next: Pointer to the next node
  *
  * Description: This structure defines a node for a singly linked list
@@ -30,15 +30,15 @@ true
  */
 typedef struct listint_s
 {
-   const int n;
-   struct listint_s *prev;
-   struct listint_s *next;
+    int n;
+    struct listint_s *prev;
+    struct listint_s *next;
 } listint_t;
 
-/*printing algorithm */
-void print_array (int arr[],int size);
-void print_list (struct Node * head);
-
+/* printing algorithm */
+void print_array(int arr[], int size);
+void print_list(listint_t *head);
+void insertion_sort_list(listint_t **list);
 /*sorting algorithms*/
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
