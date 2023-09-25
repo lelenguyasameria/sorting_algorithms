@@ -1,49 +1,26 @@
 #include "sort.h"
-
 /**
- * swap_ints - swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
- */
-void swap_ints(int *x, int *y)
-{
-    int tmp;
-
-    tmp = *x;
-    *x = *y;
-    *y = tmp;
-}
-
-/**
- * bubble_sort - Sorts an array of integers in ascending order using Bubble sort.
- * @array: The array to be sorted.
- * @size: The size of the array.
- *
- * Description:
- * This function sorts the given integer array in ascending order
- * using the Bubble sort algorithm. It prints the array after each swap.
+ * bubble_sort - sort array elements in ascending order.
+ * @array: array
+ * @size: array size
  */
 void bubble_sort(int *array, size_t size)
 {
-    size_t i, len = size;
-    bool bubbly = false;
 
-    if (array == NULL || size < 2)
-        return;
+	size_t i, index, tmp = 0;
 
-    while (bubbly == false)
-    {
-        bubbly = true;
-        for (i = 0; i < len - 1; i++)
-        {
-            if (array[i] > array[i + 1])
-            {
-                swap_ints(array + i, array + i + 1);
-                print_array(array, size);
-                bubbly = false;
-            }
-        }
-        len--;
-    }
+	if (size < 2)
+		return;
+	for (i = 0; i < size; i++)
+		for (index = 0; index < size; index++)
+		{
+			if (array[index] > array[index + 1] && array[index + 1])
+			{
+			tmp = array[index];
+			array[index] = array[index + 1];
+			array[index + 1] = tmp;
+			print_array(array, size);
+			}
+		}
 }
 
