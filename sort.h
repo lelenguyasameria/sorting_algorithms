@@ -37,8 +37,9 @@ typedef struct listint_s
 
 /* printing algorithm */
 void print_array(int arr[], int size);
-void print_list(listint_t *head);
+void print_list(const listint_t *head);
 void insertion_sort_list(listint_t **list);
+
 /*sorting algorithms*/
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
